@@ -23,7 +23,7 @@ export default function Intro() {
               opacity: [0, 1],
               duration: 2500,
               easing: "easeInOutExpo",
-              delay: 0, // No delay for the first element
+              delay: 200, // No delay for the first element
             });
 
             // Second Paragraph Animation
@@ -33,7 +33,7 @@ export default function Intro() {
               opacity: [0, 1],
               duration: 2500,
               easing: "easeInOutExpo",
-              delay: 300, // Delay (e.g., 300ms after the first element)
+              delay: 400, // Delay (e.g., 300ms after the first element)
             });
 
             // Third Paragraph Animation
@@ -53,7 +53,7 @@ export default function Intro() {
               opacity: [0, 1],
               duration: 2500,
               easing: "easeInOutExpo",
-              delay: 900,
+              delay: 800,
             });
 
             // Fifth Paragraph Animation
@@ -63,7 +63,7 @@ export default function Intro() {
               opacity: [0, 1],
               duration: 2500,
               easing: "easeInOutExpo",
-              delay: 1200,
+              delay: 1000,
             });
 
             // Optional: Disconnect observer after animation
@@ -85,7 +85,7 @@ export default function Intro() {
   }, []);
 
   return (
-    <div ref={introRef} className="intro m-20">
+    <div ref={introRef} className="m-20">
       <p ref={firstPRef} className="text-amber-400 text-3xl py-2">
         Hi, my name is
       </p>
