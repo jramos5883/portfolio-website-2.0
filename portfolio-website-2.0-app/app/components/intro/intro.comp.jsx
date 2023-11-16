@@ -20,7 +20,7 @@ export default function Intro() {
             anime({
               targets: introRef.current,
               opacity: [0, 1],
-              duration: 1000,
+              duration: 100,
               easing: "easeInOutExpo",
             });
 
@@ -93,7 +93,7 @@ export default function Intro() {
   }, []);
 
   return (
-    <div ref={introRef} className="m-20" style={{ opacity: 0 }}>
+    <div ref={introRef} className="m-8 tablet:m-20" style={{ opacity: 0 }}>
       {/* Initial hidden state */}
       <p ref={firstPRef} className="text-amber-400 text-3xl py-2">
         Hi, my name is
@@ -108,9 +108,9 @@ export default function Intro() {
         ref={fourthPRef}
         className="text-gray-500 max-w-lg text-2xl indent-8 pb-8"
       >
-        I am a Los Angeles based junior software engineer looking to break into
-        the tech industry. Currently looking to take on new projects and
-        challenges and continue to improve my coding skills and knowledge.
+        I am a Los Angeles based software engineer looking to break into the
+        tech industry. Currently looking to take on new projects and challenges
+        and continue to improve my coding skills and knowledge.
       </p>
       <div ref={fifthPRef}>
         <button className="text-amber-400 border-amber-400 p-2 mr-4 border-4 rounded-lg hover:bg-yellow-700">

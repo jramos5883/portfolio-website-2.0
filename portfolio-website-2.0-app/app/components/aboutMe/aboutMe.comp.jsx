@@ -20,7 +20,7 @@ export default function AboutMe() {
             anime({
               targets: introRef.current,
               opacity: [0, 1],
-              duration: 1000,
+              duration: 100,
               easing: "easeInOutExpo",
             });
 
@@ -93,7 +93,7 @@ export default function AboutMe() {
   }, []);
 
   return (
-    <div ref={introRef} className="m-20" style={{ opacity: 0 }}>
+    <div ref={introRef} className="m-20 mt-48" style={{ opacity: 0 }}>
       {/* Initial hidden state */}
       <div className="w-2/3">
         <p ref={firstPRef} className="text-amber-400 text-3xl py-2">
