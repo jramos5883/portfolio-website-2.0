@@ -1,11 +1,13 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 import anime from "animejs/lib/anime.es.js";
 
 export default function AboutMe() {
   const introRef = useRef(null);
-  const firstPRef = useRef(null);
+  const firstPRefDesktop = useRef(null); // Ref for desktop image
+  const firstPRefMobile = useRef(null); // Ref for mobile image
   const secondPRef = useRef(null);
   const thirdPRef = useRef(null);
   const fourthPRef = useRef(null);
@@ -26,12 +28,12 @@ export default function AboutMe() {
 
             // First Paragraph Animation
             anime({
-              targets: firstPRef.current,
-              translateY: [100, 0], // Adjust as needed
+              targets: [firstPRefDesktop.current, firstPRefMobile.current],
+              translateY: [100, 0],
               opacity: [0, 1],
               duration: 2500,
               easing: "easeInOutExpo",
-              delay: 200, // No delay for the first element
+              delay: 200,
             });
 
             // Second Paragraph Animation
@@ -93,24 +95,44 @@ export default function AboutMe() {
   }, []);
 
   return (
-    <div ref={introRef} className="m-20 mt-48" style={{ opacity: 0 }}>
+    <div
+      ref={introRef}
+      className="m-8 tablet:m-20 mt-12 lapsm:mt-48 lapsm:flex lapsm:flex-row lapsm:justify-center"
+      style={{ opacity: 0 }}
+    >
       {/* Initial hidden state */}
-      <div className="w-2/3">
-        <p ref={firstPRef} className="text-amber-400 text-3xl py-2">
-          01. <span className="text-white">About Me</span>
-        </p>
-        <p ref={secondPRef} className="text-gray-500 text-2xl indent-8 py-2">
-          Hi, I&apos;m John - a lifelong learner with a passion for science and
-          technology. My early career as an EMT, Paramedic, and Firefighter
-          Paramedic was driven by my love of science and the human body. But as
-          I continued to explore the world of tech and programming, I found
-          myself captivated by the endless possibilities for innovation and
-          problem-solving. While I enjoyed the fast paced and hands-on work of
-          emergency medicine, my true passion for tech was sparked by my
-          introduction to coding. Now, as a software engineer, I bring a unique
-          blend of analytical thinking and scientific curiosity to every project
-          I work on.
-        </p>
+
+      <div className="lapsm:w-3/5">
+        <div
+          ref={firstPRefMobile}
+          className="flex flex-col justify-center items-center"
+        >
+          <Image
+            className="profile-pic border-yellow-400 border-4 rounded-lg max-w-xs mb-8 tablet:mb-16 tablet:max-w-sm lapsm:hidden"
+            layout="responsive"
+            height={500}
+            width={500}
+            src="/images/headshot.jpg"
+            alt="Picture of a happy software engineer!"
+          />
+        </div>
+        <div ref={secondPRef}>
+          <p className="text-amber-400 text-3xl py-2">
+            01. <span className="text-white">About Me</span>
+          </p>
+          <p className="text-gray-500 text-2xl indent-8 py-2">
+            Hi, I&apos;m John - a lifelong learner with a passion for science
+            and technology. My early career as an EMT, Paramedic, and
+            Firefighter Paramedic was driven by my love of science and the human
+            body. But as I continued to explore the world of tech and
+            programming, I found myself captivated by the endless possibilities
+            for innovation and problem-solving. While I enjoyed the fast paced
+            and hands-on work of emergency medicine, my true passion for tech
+            was sparked by my introduction to coding. Now, as a software
+            engineer, I bring a unique blend of analytical thinking and
+            scientific curiosity to every project I work on.
+          </p>
+        </div>
         <p ref={thirdPRef} className="text-gray-500 text-2xl indent-8 py-2">
           As a self-taught developer, I have embraced the challenges and rewards
           of learning code through trial and error and hands-on experience. With
@@ -149,6 +171,16 @@ export default function AboutMe() {
             </a>
           </button>
         </div>
+      </div>
+      <div ref={firstPRefDesktop} className="lapsm:w-2/5 ">
+        <Image
+          className="border-yellow-400 border-4 rounded-lg max-w-xs tablet:mb-16 tablet:max-w-sm hidden lapsm:block ml-8 lapsm:mt-4"
+          layout="responsive"
+          height={500}
+          width={500}
+          src="/images/headshot.jpg"
+          alt="Picture of a happy software engineer!"
+        />
       </div>
     </div>
   );
