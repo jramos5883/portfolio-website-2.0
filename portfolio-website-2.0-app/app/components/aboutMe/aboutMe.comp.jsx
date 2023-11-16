@@ -79,7 +79,7 @@ export default function AboutMe() {
           }
         });
       },
-      { threshold: 0.25 }
+      { threshold: 0.05 }
     );
 
     if (introRef.current) {
