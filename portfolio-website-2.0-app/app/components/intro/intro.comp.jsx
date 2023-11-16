@@ -16,6 +16,14 @@ export default function Intro() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            // Intro Animation for the whole section
+            anime({
+              targets: introRef.current,
+              opacity: [0, 1],
+              duration: 1000,
+              easing: "easeInOutExpo",
+            });
+
             // First Paragraph Animation
             anime({
               targets: firstPRef.current,
@@ -85,7 +93,8 @@ export default function Intro() {
   }, []);
 
   return (
-    <div ref={introRef} className="m-20">
+    <div ref={introRef} className="m-20" style={{ opacity: 0 }}>
+      {/* Initial hidden state */}
       <p ref={firstPRef} className="text-amber-400 text-3xl py-2">
         Hi, my name is
       </p>
@@ -109,13 +118,11 @@ export default function Intro() {
             Get In Touch <i className="fa-regular fa-envelope fa-2xl"></i>
           </a>
         </button>
-        <a
-          className="text-amber-400 border-amber-400 p-2 border-4 rounded-lg hover:bg-yellow-700"
-          href="/pdf/JohnRamosTechResume.pdf"
-          target="_blank"
-        >
-          Resume <i className="fa-regular fa-file fa-2xl"></i>
-        </a>
+        <button className="text-amber-400 border-amber-400 p-2 mr-4 border-4 rounded-lg hover:bg-yellow-700">
+          <a href="/pdf/JohnRamosTechResume.pdf" target="_blank">
+            Resume <i className="fa-regular fa-file fa-2xl"></i>
+          </a>
+        </button>
       </div>
     </div>
   );
