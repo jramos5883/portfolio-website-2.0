@@ -81,7 +81,7 @@ export default function AboutMe() {
           }
         });
       },
-      { threshold: 0.05 }
+      { threshold: 0.15 }
     );
 
     if (introRef.current) {
@@ -97,7 +97,7 @@ export default function AboutMe() {
   return (
     <div
       ref={introRef}
-      className="m-8 tablet:m-20 mt-12 lapsm:mt-48 lapsm:flex lapsm:flex-row lapsm:justify-center"
+      className="m-8 tablet:m-20 mt-12 lapsm:mt-48 lapsm:flex lapsm:flex-row lapsm:justify-center desksm:m-60 desksm:mt-80 desklg:mr-96 desklg:ml-96"
       style={{ opacity: 0 }}
     >
       {/* Initial hidden state */}
@@ -108,7 +108,7 @@ export default function AboutMe() {
           className="flex flex-col justify-center items-center"
         >
           <Image
-            className="profile-pic border-yellow-400 border-4 rounded-lg max-w-xs mb-8 tablet:mb-16 tablet:max-w-sm lapsm:hidden"
+            className="border-yellow-400 border-4 rounded-lg max-w-xs mb-8 tablet:mb-16 tablet:max-w-sm lapsm:hidden"
             layout="responsive"
             height={500}
             width={500}
@@ -172,9 +172,12 @@ export default function AboutMe() {
           </button>
         </div>
       </div>
-      <div ref={firstPRefDesktop} className="lapsm:w-2/5 ">
+      <div
+        ref={firstPRefDesktop}
+        className="lapsm:w-2/5 flex flex-col items-center"
+      >
         <Image
-          className="border-yellow-400 border-4 rounded-lg max-w-xs tablet:mb-16 tablet:max-w-sm hidden lapsm:block ml-8 lapsm:mt-4"
+          className="border-yellow-400 border-4 rounded-lg max-w-xs tablet:mb-16 tablet:max-w-sm hidden lapsm:block lapsm:ml-8 lapsm:mt-4 lapsm:max-w-md laplg:max-w-lg desksm:max-w-xl"
           layout="responsive"
           height={500}
           width={500}

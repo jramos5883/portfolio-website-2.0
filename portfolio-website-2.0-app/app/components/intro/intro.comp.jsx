@@ -93,7 +93,11 @@ export default function Intro() {
   }, []);
 
   return (
-    <div ref={introRef} className="m-8 tablet:m-20" style={{ opacity: 0 }}>
+    <div
+      ref={introRef}
+      className="m-8 tablet:m-20 desksm:m-60 desklg:mr-96 desklg:ml-96"
+      style={{ opacity: 0 }}
+    >
       {/* Initial hidden state */}
       <p ref={firstPRef} className="text-amber-400 text-3xl py-2">
         Hi, my name is
