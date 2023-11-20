@@ -1,12 +1,77 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+import anime from "animejs/lib/anime.es.js";
+
 import { SiNextdotjs, SiSupabase } from "react-icons/si";
 import { FaLinux, FaGithub, FaWindows } from "react-icons/fa";
 
 export default function Skills() {
+  const loadRef = useRef(null); // Ref for the skills container
+  const skillRefs = useRef([]);
+  skillRefs.current = [];
+
+  const addToRefs = (el) => {
+    if (el && !skillRefs.current.includes(el)) {
+      skillRefs.current.push(el);
+    }
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Animate the skills container opacity
+            anime({
+              targets: loadRef.current,
+              opacity: [0, 1],
+              duration: 1000,
+              easing: "easeInOutExpo",
+            });
+
+            // Animation for each skill item
+            skillRefs.current.forEach((skill, index) => {
+              anime({
+                targets: skill,
+                translateY: [100, 0],
+                rotate: "1turn",
+                opacity: [0, 1],
+                duration: 2500,
+                easing: "easeInOutExpo",
+                delay: index * 200,
+              });
+            });
+
+            // Optional: Disconnect observer after animation
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.25 }
+    );
+
+    if (loadRef.current) {
+      observer.observe(loadRef.current);
+    }
+
+    // Clean up
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
-    <div className="flex flex-col items-center">
-      <p className="text-3xl text-white mb-8">Skills</p>
-      <div className="grid grid-cols-3 tablet:grid-cols-5 grid-rows-5 tablet:grid-rows-3 gap-2 celllg:gap-4 mx-2">
-        <div className="flex flex-col items-center">
+    <div
+      ref={loadRef}
+      className="flex flex-col items-center mb-48"
+      style={{ opacity: 0 }} // Initial opacity set to 0
+    >
+      <p ref={addToRefs} className="text-3xl text-white mb-8">
+        Skills
+      </p>
+      <div className="grid grid-cols-3 tablet:grid-cols-5 grid-rows-5 tablet:grid-rows-3 gap-2 celllg:gap-4 mx-2 laplg:grid-rows-2 laplg:grid-cols-8 desksm:grid-cols-10 desklg:grid-cols-12">
+        <div ref={addToRefs} className="flex flex-col items-center">
           <p className="text-white text-2xl">HTML</p>
           <svg
             className="html"
@@ -29,7 +94,7 @@ export default function Skills() {
             ></path>
           </svg>
         </div>
-        <div className="flex flex-col items-center">
+        <div ref={addToRefs} className="flex flex-col items-center">
           <p className="text-white text-2xl">CSS</p>
           <svg
             className="css"
@@ -52,7 +117,7 @@ export default function Skills() {
             ></path>
           </svg>
         </div>
-        <div className="flex flex-col items-center">
+        <div ref={addToRefs} className="flex flex-col items-center">
           <p className="text-white text-2xl">JavaScript</p>
           <svg
             className="javascript"
@@ -70,7 +135,7 @@ export default function Skills() {
             ></path>
           </svg>
         </div>
-        <div className="flex flex-col items-center">
+        <div ref={addToRefs} className="flex flex-col items-center">
           <p className="text-white text-2xl">React</p>
           <svg
             className="react"
@@ -96,7 +161,7 @@ export default function Skills() {
             ></path>
           </svg>
         </div>
-        <div className="flex flex-col items-center">
+        <div ref={addToRefs} className="flex flex-col items-center">
           <p className="text-white text-2xl">Python</p>
           <svg
             className="python"
@@ -117,7 +182,7 @@ export default function Skills() {
             ></path>
           </svg>
         </div>
-        <div className="flex flex-col items-center">
+        <div ref={addToRefs} className="flex flex-col items-center">
           <p className="text-white text-2xl">TypeScript</p>
           <svg
             className="typescript"
@@ -139,11 +204,11 @@ export default function Skills() {
             ></path>
           </svg>
         </div>
-        <div className="flex flex-col items-center">
+        <div ref={addToRefs} className="flex flex-col items-center">
           <p className="text-white text-2xl">Next Js</p>
           <SiNextdotjs className="next text-white text-8xl" />
         </div>
-        <div className="flex flex-col items-center">
+        <div ref={addToRefs} className="flex flex-col items-center">
           <p className="text-white text-2xl">Firebase</p>
           <svg
             className="firebase"
@@ -173,11 +238,11 @@ export default function Skills() {
             ></path>
           </svg>
         </div>
-        <div className="flex flex-col items-center">
+        <div ref={addToRefs} className="flex flex-col items-center">
           <p className="text-white text-2xl">Supabase</p>
           <SiSupabase className="text-teal-400 text-8xl" />
         </div>
-        <div className="flex flex-col items-center">
+        <div ref={addToRefs} className="flex flex-col items-center">
           <p className="text-white text-2xl">Tailwind</p>
           <svg
             className="tailwindcss"
@@ -210,7 +275,7 @@ export default function Skills() {
             <path d="M41,29.5c-0.162,0-0.32-0.078-0.417-0.223c-0.153-0.229-0.091-0.54,0.139-0.693c2.24-1.493,3.869-2.383,6.057-2.809 c0.273-0.046,0.534,0.125,0.586,0.396c0.053,0.271-0.125,0.534-0.396,0.587c-2.022,0.393-3.561,1.237-5.693,2.658 C41.192,29.473,41.096,29.5,41,29.5z"></path>
           </svg>
         </div>
-        <div className="flex flex-col items-center">
+        <div ref={addToRefs} className="flex flex-col items-center">
           <p className="text-white text-2xl">Bootstrap</p>
           <svg
             className="bootstrap"
@@ -250,7 +315,7 @@ export default function Skills() {
             ></path>
           </svg>
         </div>
-        <div className="flex flex-col items-center">
+        <div ref={addToRefs} className="flex flex-col items-center">
           <p className="text-white text-2xl">Node Js</p>
           <svg
             className="nodejs"
@@ -271,15 +336,15 @@ export default function Skills() {
             ></path>
           </svg>
         </div>
-        <div className="flex flex-col items-center">
+        <div ref={addToRefs} className="flex flex-col items-center">
           <p className="text-white text-2xl">GitHub</p>
           <FaGithub className="text-white text-8xl" />
         </div>
-        <div className="flex flex-col items-center">
+        <div ref={addToRefs} className="flex flex-col items-center">
           <p className="text-white text-2xl">Linux</p>
           <FaLinux className="text-white text-8xl" />
         </div>
-        <div className="flex flex-col items-center">
+        <div ref={addToRefs} className="flex flex-col items-center">
           <p className="text-white text-2xl">Windows</p>
           <FaWindows className="text-sky-400 text-8xl" />
         </div>

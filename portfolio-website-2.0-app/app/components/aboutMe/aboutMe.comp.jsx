@@ -97,7 +97,7 @@ export default function AboutMe() {
   return (
     <div
       ref={introRef}
-      className="m-8 tablet:m-20 mt-12 lapsm:mt-48 lapsm:flex lapsm:flex-row lapsm:justify-center desksm:m-60 desksm:mt-80 desklg:mr-96 desklg:ml-96"
+      className="m-8 tablet:ml-20 tablet:mr-20 tablet:mt-20 mt-12 lapsm:mt-48 lapsm:flex lapsm:flex-row lapsm:justify-center desksm:ml-60 desksm:mr-60 desksm:mt-60 desksm:mt-80 desklg:mr-96 desklg:ml-96"
       style={{ opacity: 0 }}
     >
       {/* Initial hidden state */}
@@ -151,7 +151,7 @@ export default function AboutMe() {
           any buisness looking for a passionate, knowlegable, and adaptable team
           member.
         </p>
-        <div ref={fifthPRef} className="py-8">
+        <div ref={fifthPRef} className="pt-8">
           <button className="text-amber-400 border-yellow-400 p-2 mr-4 border-4 rounded-lg hover:bg-yellow-700">
             <a
               href="https://www.linkedin.com/in/jrprodev/"
@@ -177,7 +177,7 @@ export default function AboutMe() {
         className="lapsm:w-2/5 flex flex-col items-center"
       >
         <Image
-          className="border-yellow-400 border-4 rounded-lg max-w-xs tablet:mb-16 tablet:max-w-sm hidden lapsm:block lapsm:ml-8 lapsm:mt-4 lapsm:max-w-md laplg:max-w-lg desksm:max-w-xl"
+          className="border-yellow-400 border-4 rounded-lg max-w-xs tablet:max-w-sm hidden lapsm:block lapsm:ml-8 lapsm:mt-4 lapsm:max-w-md laplg:max-w-lg desksm:max-w-xl"
           layout="responsive"
           height={500}
           width={500}
