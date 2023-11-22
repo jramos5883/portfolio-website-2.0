@@ -94,7 +94,7 @@ export default function Intro() {
   }, []);
 
   return (
-    <div className="max-tablet:flex max-tablet:flex-col max-tablet:justify-center max-tablet:items-center flex flex-row">
+    <div className="max-tablet:flex max-tablet:flex-col max-tablet:justify-center max-tablet:items-center laplg:flex laplg:flex-row">
       <div
         ref={introRef}
         className="m-8 tablet:m-20 desksm:m-60 desklg:mr-96 desklg:ml-96"
