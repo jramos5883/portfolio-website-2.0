@@ -490,7 +490,7 @@ export default function LinkGridArt() {
       "white",
     ],
   ];
-  const introRef = useRef(null); // Correctly set ref
+  const introLinkRef = useRef(null); // Correctly set ref
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -498,14 +498,14 @@ export default function LinkGridArt() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             anime({
-              targets: introRef.current,
+              targets: introLinkRef.current,
               opacity: [0, 1],
               duration: 5000, // Increased duration for visibility
               easing: "easeInOutExpo",
             });
 
             anime({
-              targets: introRef.current.querySelectorAll(".link-pixel"),
+              targets: introLinkRef.current.querySelectorAll(".link-pixel"),
               translateX: anime.stagger(10, {
                 grid: [cols, rows],
                 from: "center",
@@ -521,7 +521,7 @@ export default function LinkGridArt() {
                 from: "center",
                 axis: "x",
               }),
-              delay: anime.stagger(300, {
+              delay: anime.stagger(250, {
                 grid: [cols, rows],
                 from: "center",
                 start: 1500,
@@ -539,31 +539,33 @@ export default function LinkGridArt() {
       { threshold: 0.1 }
     );
 
-    observer.observe(introRef.current);
+    observer.observe(introLinkRef.current);
 
     return () => observer.disconnect();
   }, []);
 
   return (
-    <div
-      ref={introRef}
-      className="flex flex-col justify-center items-center mb-48"
-      style={{ opacity: 0 }}
-    >
-      {Array.from({ length: rows }).map((_, rowIndex) => (
-        <div key={rowIndex} className="flex flex-row">
-          {Array.from({ length: cols }).map((_, colIndex) => (
-            <div
-              key={colIndex}
-              className="link-pixel w-2 h-2 tablet:w-4 tablet:h-4"
-              style={{
-                backgroundColor: linkColors[rowIndex][colIndex],
-                // border: "1px solid black",
-              }}
-            ></div>
-          ))}
-        </div>
-      ))}
+    <div className="my-28 tablet:mb-36 tablet:mt-40">
+      <div
+        ref={introLinkRef}
+        className="flex flex-col justify-center items-center"
+        style={{ opacity: 0 }}
+      >
+        {Array.from({ length: rows }).map((_, rowIndex) => (
+          <div key={rowIndex} className="flex flex-row">
+            {Array.from({ length: cols }).map((_, colIndex) => (
+              <div
+                key={colIndex}
+                className="link-pixel w-2 h-2 tablet:w-4 tablet:h-4"
+                style={{
+                  backgroundColor: linkColors[rowIndex][colIndex],
+                  // border: "1px solid black",
+                }}
+              ></div>
+            ))}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

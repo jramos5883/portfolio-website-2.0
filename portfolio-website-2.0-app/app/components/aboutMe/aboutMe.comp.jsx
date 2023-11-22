@@ -81,7 +81,7 @@ export default function AboutMe() {
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.1 }
     );
 
     if (introRef.current) {
@@ -97,7 +97,7 @@ export default function AboutMe() {
   return (
     <div
       ref={introRef}
-      className="m-8 tablet:ml-20 tablet:mr-20 tablet:mt-20 mt-12 lapsm:mt-48 lapsm:flex lapsm:flex-row lapsm:justify-center desksm:ml-60 desksm:mr-60 desksm:mt-60 desksm:mt-80 desklg:mr-96 desklg:ml-96"
+      className="m-8 tablet:ml-20 tablet:mr-20 tablet:mt-20 lapsm:mt-48 lapsm:flex lapsm:flex-row lapsm:justify-center desksm:ml-60 desksm:mr-60 desksm:mt-60 desksm:mt-80 desklg:mr-96 desklg:ml-96"
       style={{ opacity: 0 }}
     >
       {/* Initial hidden state */}
@@ -107,6 +107,9 @@ export default function AboutMe() {
           ref={firstPRefMobile}
           className="flex flex-col justify-center items-center"
         >
+          <p className="lapsm:hidden text-amber-400 text-3xl pb-4">
+            01. <span className="text-white">About Me</span>
+          </p>
           <Image
             className="border-yellow-400 border-4 rounded-lg max-w-xs mb-8 tablet:mb-16 tablet:max-w-sm lapsm:hidden"
             layout="responsive"
@@ -117,7 +120,7 @@ export default function AboutMe() {
           />
         </div>
         <div ref={secondPRef}>
-          <p className="text-amber-400 text-3xl py-2">
+          <p className="hidden lapsm:block text-amber-400 text-3xl pb-4">
             01. <span className="text-white">About Me</span>
           </p>
           <p className="text-gray-500 text-2xl indent-8 py-2">
