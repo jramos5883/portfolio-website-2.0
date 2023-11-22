@@ -545,7 +545,7 @@ export default function LinkGridArt() {
   }, []);
 
   return (
-    <div className="my-28 tablet:mb-36 tablet:mt-40">
+    <div className="my-28 tablet:mb-36 tablet:mt-40 laplg:ml-8">
       <div
         ref={introLinkRef}
         className="flex flex-col justify-center items-center"
