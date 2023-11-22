@@ -236,12 +236,12 @@ export default function LinkGridArt() {
       "yellow",
       "black",
       "white",
-      "black",
+      "blue",
       "black",
       "tan",
       "tan",
       "black",
-      "black",
+      "blue",
       "white",
       "black",
       "yellow",
@@ -256,12 +256,12 @@ export default function LinkGridArt() {
       "black",
       "black",
       "tan",
-      "black",
+      "blue",
       "white",
       "tan",
       "tan",
       "white",
-      "black",
+      "blue",
       "tan",
       "black",
       "black",
@@ -516,7 +516,7 @@ export default function LinkGridArt() {
                 from: "center",
                 axis: "y",
               }),
-              rotateZ: anime.stagger([360, 360], {
+              rotateZ: anime.stagger([720, 720], {
                 grid: [cols, rows],
                 from: "center",
                 axis: "x",
@@ -559,7 +559,7 @@ export default function LinkGridArt() {
                 className="link-pixel w-2 h-2 tablet:w-4 tablet:h-4 desksm:w-6 desksm:h-6 desklg:w-8 desklg:h-8"
                 style={{
                   backgroundColor: linkColors[rowIndex][colIndex],
-                  // border: "1px solid black",
+                  border: "1px solid black",
                 }}
               ></div>
             ))}
