@@ -97,7 +97,7 @@ export default function AboutMe() {
   return (
     <div
       ref={introRef}
-      className="m-8 tablet:ml-20 tablet:mr-20 tablet:mt-20 lapsm:mt-48 lapsm:flex lapsm:flex-row lapsm:justify-center desksm:ml-60 desksm:mr-60 desksm:mt-60 desksm:mt-80 desklg:mr-96 desklg:ml-96"
+      className="m-8 tablet:mx-20 tablet:mt-20 lapsm:mt-48 lapsm:flex lapsm:flex-row lapsm:justify-center lapxl:mx-52 desksm:mx-80 desksm:mt-80 desklg:mr-96 desklg:ml-96"
       style={{ opacity: 0 }}
     >
       {/* Initial hidden state */}
@@ -180,7 +180,7 @@ export default function AboutMe() {
         className="lapsm:w-2/5 flex flex-col items-center"
       >
         <Image
-          className="border-yellow-400 border-4 rounded-lg max-w-xs tablet:max-w-sm hidden lapsm:block lapsm:ml-8 lapsm:mt-4 lapsm:max-w-md laplg:max-w-lg desksm:max-w-xl"
+          className="border-yellow-400 border-4 rounded-lg max-w-xs tablet:max-w-sm hidden lapsm:block lapsm:ml-8 lapsm:mt-4 lapsm:max-w-md laplg:max-w-lg"
           layout="responsive"
           height={500}
           width={500}

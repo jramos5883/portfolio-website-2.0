@@ -14,6 +14,7 @@ module.exports = {
         tablet: "768px",
         lapsm: "1024px",
         laplg: "1366px",
+        lapxl: "1536px",
         desksm: "1920px",
         desklg: "2560px",
       },

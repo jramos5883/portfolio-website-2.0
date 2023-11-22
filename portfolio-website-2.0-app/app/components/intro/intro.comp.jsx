@@ -94,12 +94,8 @@ export default function Intro() {
   }, []);
 
   return (
-    <div className="max-tablet:flex max-tablet:flex-col max-tablet:justify-center max-tablet:items-center laplg:flex laplg:flex-row">
-      <div
-        ref={introRef}
-        className="m-8 tablet:m-20 desksm:m-60 desklg:mr-96 desklg:ml-96"
-        style={{ opacity: 0 }}
-      >
+    <div className="m-8 tablet:m-20 max-tablet:flex max-tablet:flex-col max-tablet:justify-center max-tablet:items-center laplg:flex laplg:flex-row laplg:items-center lapxl:mx-52 desksm:mx-80 desklg:mr-96 desklg:ml-96">
+      <div ref={introRef} className="" style={{ opacity: 0 }}>
         {/* Initial hidden state */}
         <p ref={firstPRef} className="text-amber-400 text-3xl py-2">
           Hi, my name is
@@ -118,7 +114,7 @@ export default function Intro() {
           tech industry. Currently looking to take on new projects and
           challenges and continue to improve my coding skills and knowledge.
         </p>
-        <div ref={fifthPRef}>
+        <div className="mb-8" ref={fifthPRef}>
           <button className="text-amber-400 border-amber-400 p-2 mr-4 border-4 rounded-lg hover:bg-yellow-700">
             <a href="#id_contact">
               Get In Touch <i className="fa-regular fa-envelope fa-2xl"></i>
@@ -131,7 +127,9 @@ export default function Intro() {
           </button>
         </div>
       </div>
-      <LinkGridArt />
+      <div className="flex justify-center items-center">
+        <LinkGridArt />
+      </div>
     </div>
   );
 }

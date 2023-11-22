@@ -545,7 +545,7 @@ export default function LinkGridArt() {
   }, []);
 
   return (
-    <div className="my-28 tablet:mb-36 tablet:mt-40 laplg:ml-8">
+    <div className="my-28 tablet:mb-36 tablet:mt-40 laplg:ml-32 lapxl:ml-24 desksm:ml-32 desksm:mb-12 desklg:pl-40">
       <div
         ref={introLinkRef}
         className="flex flex-col justify-center items-center"
@@ -556,7 +556,7 @@ export default function LinkGridArt() {
             {Array.from({ length: cols }).map((_, colIndex) => (
               <div
                 key={colIndex}
-                className="link-pixel w-2 h-2 tablet:w-4 tablet:h-4"
+                className="link-pixel w-2 h-2 tablet:w-4 tablet:h-4 desksm:w-6 desksm:h-6 desklg:w-8 desklg:h-8"
                 style={{
                   backgroundColor: linkColors[rowIndex][colIndex],
                   // border: "1px solid black",
