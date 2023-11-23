@@ -119,7 +119,10 @@ export default function AboutMe() {
             alt="Picture of a happy software engineer!"
           />
         </div>
-        <div ref={secondPRef}>
+        <div
+          ref={secondPRef}
+          className="flex flex-col justify-center items-center"
+        >
           <p className="hidden lapsm:block text-amber-400 text-3xl pb-4">
             01. <span className="text-white">About Me</span>
           </p>

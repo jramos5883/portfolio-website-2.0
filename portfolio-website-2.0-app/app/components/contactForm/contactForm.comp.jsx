@@ -27,25 +27,27 @@ export default function ContactForm() {
 
   return (
     <div className="flex flex-col justify-center items-center m-8">
-      <p className="text-amber-400 text-3xl pb-4">
+      <p className="text-amber-400 text-3xl">
         03. <span className="text-white">Contact Form</span>
       </p>
 
-      <p className="text-white text-4xl font-bold ">Get In Touch!</p>
-      <p className="text-gray-500 text-2xl indent max-w-2xl">
+      <p className="text-white text-4xl celllg:text-5xl tablet:text-6xl font-bold mb-12 mt-12">
+        Get In Touch!
+      </p>
+      <p className="text-gray-500 text-2xl indent max-w-3xl indent-8 mb-4">
         I am currently looking to make my break into tech and find my place in
         the industry. I am also working on expanding my network and meeting more
         like minded people. If you have any questions or would just like to say
-        hi, feel free to send me a message!
+        hi and chat, feel free to send me a message!
       </p>
-      <form className="w-full max-w-2xl" onSubmit={sendEmail}>
+      <form className="w-full max-w-3xl" onSubmit={sendEmail}>
         <div className="flex flex-col">
-          <div className="">
+          <div className="mb-4">
             <label className="text-amber-400 text-2xl">Name:</label>
             <input
               type="text"
               name="name"
-              className="w-full border rounded"
+              className="w-full border rounded border-yellow-400 border-4 p-2"
               placeholder="Full Name / Business Name"
               required
             />
@@ -55,7 +57,7 @@ export default function ContactForm() {
             <input
               type="email"
               name="email"
-              className="w-full border rounded"
+              className="w-full border rounded border-yellow-400 border-4 p-2"
               placeholder="Email Address"
               required
             />
@@ -65,17 +67,17 @@ export default function ContactForm() {
             <input
               type="tel"
               name="phone"
-              className="w-full border rounded"
+              className="w-full border rounded border-yellow-400 border-4 p-2"
               placeholder="Phone Number (optional)"
             />
           </div>
           <div className="mb-4">
-            <label className="text-amber-400 text-2xl">Message:</label>
+            <label className="text-amber-400 text-2xl ">Message:</label>
             <textarea
               placeholder="Your Message"
-              className="w-full border rounded"
+              className="w-full border rounded border-yellow-400 border-4 p-2"
               name="message"
-              rows="10"
+              rows="12"
               required
             ></textarea>
           </div>
