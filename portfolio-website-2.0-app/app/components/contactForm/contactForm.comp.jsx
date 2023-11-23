@@ -31,7 +31,7 @@ export default function ContactForm() {
         03. <span className="text-white">Contact Form</span>
       </p>
 
-      <p className="text-white text-4xl celllg:text-5xl tablet:text-6xl font-bold mb-12 mt-12">
+      <p className="text-white text-4xl celllg:text-5xl tablet:text-6xl font-bold mt-8 mb-4 tablet:mt-12 tablet:mb-18">
         Get In Touch!
       </p>
       <p className="text-gray-500 text-2xl indent max-w-3xl indent-8 mb-4">
