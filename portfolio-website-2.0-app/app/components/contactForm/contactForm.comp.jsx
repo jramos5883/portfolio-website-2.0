@@ -1,4 +1,30 @@
+"use client";
+
+import emailjs from "emailjs-com";
+import { useEffect } from "react";
+
 export default function ContactForm() {
+  useEffect(() => {
+    emailjs.init("c_ZhbIiuPsaACfH3u");
+  }, []);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    const form = e.target;
+
+    emailjs.sendForm("service_ib3ekjp", "template_u3il81m", e.target).then(
+      (result) => {
+        console.log(result.text);
+        form.reset();
+        alert("Message sent successfully! Talk to you soon! d[^_^]b");
+      },
+      (error) => {
+        console.log(error.text);
+        alert("Failed to send message, please try again.");
+      }
+    );
+  };
+
   return (
     <div className="flex flex-col justify-center items-center m-8">
       <p className="text-amber-400 text-3xl pb-4">
@@ -6,35 +32,21 @@ export default function ContactForm() {
       </p>
 
       <p className="text-white text-4xl font-bold ">Get In Touch!</p>
-      <p className="text-gray-500 text-2xl  indent max-w-2xl">
+      <p className="text-gray-500 text-2xl indent max-w-2xl">
         I am currently looking to make my break into tech and find my place in
         the industry. I am also working on expanding my network and meeting more
         like minded people. If you have any questions or would just like to say
         hi, feel free to send me a message!
       </p>
-      <form
-        target="_blank"
-        action="https://formsubmit.co/45e1dbe943177426372966c2f8438520"
-        method="POST"
-        className="w-full max-w-2xl" // Set maximum width to limit the form width
-      >
-        {/* Honeypot */}
-        <input type="text" name="_honey" style={{ display: "none" }} />
-
-        {/* Disable reCaptcha */}
-        {/* <input type="hidden" name="_captcha" value="false" /> */}
-
-        {/* Form Template: Table */}
-        <input type="hidden" name="_template" value="table" />
-
+      <form className="w-full max-w-2xl" onSubmit={sendEmail}>
         <div className="flex flex-col">
           <div className="">
             <label className="text-amber-400 text-2xl">Name:</label>
             <input
               type="text"
-              name="Name&nbsp;/&nbsp;Alias"
+              name="name"
               className="w-full border rounded"
-              placeholder="Full Name / Buisness Name"
+              placeholder="Full Name / Business Name"
               required
             />
           </div>
@@ -42,7 +54,7 @@ export default function ContactForm() {
             <label className="text-amber-400 text-2xl">Email:</label>
             <input
               type="email"
-              name="Email"
+              name="email"
               className="w-full border rounded"
               placeholder="Email Address"
               required
@@ -52,7 +64,7 @@ export default function ContactForm() {
             <label className="text-amber-400 text-2xl">Phone Number:</label>
             <input
               type="tel"
-              name="Phone&nbsp;Number"
+              name="phone"
               className="w-full border rounded"
               placeholder="Phone Number (optional)"
             />
@@ -61,8 +73,8 @@ export default function ContactForm() {
             <label className="text-amber-400 text-2xl">Message:</label>
             <textarea
               placeholder="Your Message"
-              className="w-full border rounded "
-              name="Message"
+              className="w-full border rounded"
+              name="message"
               rows="10"
               required
             ></textarea>

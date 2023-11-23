@@ -1,6 +1,5 @@
 import Navbar from "./navbar";
 
-import Script from "next/script";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -14,8 +13,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* Add script tag for animejs */}
-      {/* <Script src="/node_modules/animejs/lib/anime.min.js"></Script> */}
       <body className={inter.className}>
         <Navbar />
         {children}
