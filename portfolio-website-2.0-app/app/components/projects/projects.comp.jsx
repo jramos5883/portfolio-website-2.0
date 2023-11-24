@@ -19,9 +19,9 @@ export default function Projects() {
           alt="CozyCupid Website"
         />
         <p className="text-gray-500 text-2xl indent-8 py-4">
-          Lead meetings with client to help create the brand of the company's
-          product. Collaborated with client to build a responsive website that
-          fulfilled all of the company's buisness needs.
+          Lead meetings with client to help create the brand of the
+          company&apos;s product. Collaborated with client to build a responsive
+          website that fulfilled all of the company&apos;s buisness needs.
         </p>
       </div>
     </div>
