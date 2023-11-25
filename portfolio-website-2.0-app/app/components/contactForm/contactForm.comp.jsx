@@ -26,7 +26,10 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center m-8">
+    <div
+      id="id_contact"
+      className="flex flex-col justify-center items-center m-8"
+    >
       <p className="text-amber-400 text-3xl">
         03. <span className="text-white">Contact Form</span>
       </p>

@@ -11,7 +11,6 @@ export default function AboutMe() {
   const secondPRef = useRef(null);
   const thirdPRef = useRef(null);
   const fourthPRef = useRef(null);
-  const fifthPRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -66,16 +65,6 @@ export default function AboutMe() {
               delay: 800,
             });
 
-            // Fifth Paragraph Animation
-            anime({
-              targets: fifthPRef.current,
-              translateY: [100, 0],
-              opacity: [0, 1],
-              duration: 2500,
-              easing: "easeInOutExpo",
-              delay: 1000,
-            });
-
             // Optional: Disconnect observer after animation
             observer.disconnect();
           }
@@ -96,6 +85,7 @@ export default function AboutMe() {
 
   return (
     <div
+      id="id_aboutMe"
       ref={introRef}
       className="m-8 tablet:mx-20 tablet:mt-20 lapsm:mt-48 lapsm:flex lapsm:flex-row lapsm:justify-center lapxl:mx-52 desksm:mx-80 desksm:mt-80 desklg:mr-96 desklg:ml-96"
       style={{ opacity: 0 }}
@@ -157,26 +147,6 @@ export default function AboutMe() {
           any buisness looking for a passionate, knowlegable, and adaptable team
           member.
         </p>
-        <div ref={fifthPRef} className="pt-8">
-          <button className="text-amber-400 border-yellow-400 p-2 mr-4 border-4 rounded-lg hover:bg-yellow-700">
-            <a
-              href="https://www.linkedin.com/in/jrprodev/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Linked&apos;in <i className="fa-brands fa-linkedin fa-2xl"></i>
-            </a>
-          </button>
-          <button className="text-amber-400 border-yellow-400 p-2 mr-4 border-4 rounded-lg hover:bg-yellow-700">
-            <a
-              href="https://github.com/jramos5883"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub <i className="fa-brands fa-github fa-2xl"></i>
-            </a>
-          </button>
-        </div>
       </div>
       <div
         ref={firstPRefDesktop}

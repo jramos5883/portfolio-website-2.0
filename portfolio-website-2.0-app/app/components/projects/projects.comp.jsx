@@ -3,7 +3,10 @@ import Link from "next/link";
 
 export default function Projects() {
   return (
-    <div className="flex flex-col justify-center items-center m-8 lapxl:mx-52 desksm:mx-80 desksm:mt-80 desklg:mr-96 desklg:ml-96 mb-24">
+    <div
+      id="id_projects"
+      className="flex flex-col justify-center items-center m-8 lapxl:mx-52 desksm:mx-80 desksm:mt-80 desklg:mr-96 desklg:ml-96 mb-24"
+    >
       <p className="text-amber-400 text-3xl mb-8">
         02. <span className="text-white">Projects</span>
       </p>
@@ -18,7 +21,7 @@ export default function Projects() {
             src="/images/cozyCupidWebsite.png"
             alt="CozyCupid Website"
           />
-          <div className="mb-8">
+          <div className="text-2xl mb-8">
             <Link
               href="https://www.cozycupid.com/"
               target="_blank"
@@ -72,7 +75,7 @@ export default function Projects() {
             src="/images/portfolioPttM.png"
             alt="Poke To The Moon"
           />
-          <div className="mb-8">
+          <div className="text-2xl mb-8">
             <Link
               href="https://www.poketothemoon.com/"
               target="_blank"
@@ -131,7 +134,7 @@ export default function Projects() {
             src="/images/portfolioDashboard.png"
             alt="Personal Dashboard"
           />
-          <div className="mb-8">
+          <div className="text-2xl mb-8">
             <Link
               href="https://dashboard-kappa-blue.vercel.app/"
               target="_blank"
@@ -193,7 +196,7 @@ export default function Projects() {
             src="/images/portfolioBlog.png"
             alt="Blog Website"
           />
-          <div className="mb-8">
+          <div className="text-2xl mb-8">
             <Link
               href="https://react-typescript-blog-peach.vercel.app/"
               target="_blank"
