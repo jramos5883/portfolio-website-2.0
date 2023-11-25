@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Projects() {
   return (
-    <div className="flex flex-col justify-center items-center m-8 lapxl:mx-52 desksm:mx-80 desksm:mt-80 desklg:mr-96 desklg:ml-96">
+    <div className="flex flex-col justify-center items-center m-8 lapxl:mx-52 desksm:mx-80 desksm:mt-80 desklg:mr-96 desklg:ml-96 mb-24">
       <p className="text-amber-400 text-3xl mb-8">
         02. <span className="text-white">Projects</span>
       </p>
@@ -28,12 +28,22 @@ export default function Projects() {
               Live Site
             </Link>
           </div>
-          <p className="text-gray-500 text-2xl indent-8 mb-4 celllg:max-w-sm tablet:max-w-md lapsm:max-w-lg desksm:max-w-2xl desklg:max-w-3xl">
-            Lead meetings with client to help create the brand of the
-            company&apos;s product. Collaborated with client to build a
-            responsive website that fulfilled all of the company&apos;s buisness
-            needs.
-          </p>
+          <div className="text-gray-500 text-2xl mb-4 celllg:max-w-sm tablet:max-w-md lapsm:max-w-lg desksm:max-w-2xl desklg:max-w-3xl">
+            <ul>
+              <li className="">
+                - Lead meetings with clients and contributed to creating the
+                brand of the company&apos;s product.
+              </li>
+              <li className="">
+                - Utilized FormSubmit to create a contact form that sends emails
+                directnly to the clients invoice.
+              </li>
+              <li className="">
+                - Collaborated with clients to build a responsive website that
+                fulfilled all of the buisness needs of the company.
+              </li>
+            </ul>
+          </div>
           <div className="flex flex-wrap">
             <p className="text-amber-400 text-lg border-yellow-400 border-4 rounded-lg px-2 m-1">
               React
@@ -72,9 +82,25 @@ export default function Projects() {
               Live Site
             </Link>
           </div>
-          <p className="text-gray-500 text-2xl indent-8 mb-4 celllg:max-w-sm tablet:max-w-md lapsm:max-w-lg desksm:max-w-2xl desklg:max-w-3xl">
-            Collaborated with resturant owners to create
-          </p>
+          <div className="text-gray-500 text-2xl mb-4 celllg:max-w-sm tablet:max-w-md lapsm:max-w-lg desksm:max-w-2xl desklg:max-w-3xl">
+            <ul>
+              <li className="">
+                - Spearheaded collaboration with restaurant owners, meticulously
+                shaping the digital representation of their business to
+                perfectly align with their vision and goals.
+              </li>
+              <li className="">
+                - Employed responsive design principles using Tailwind CSS,
+                ensuring optimal webpage presentation across various devices for
+                a seamless user experience.
+              </li>
+              <li className="">
+                - Utilized the Google Maps Embedded API, offering an intuitive,
+                user-friendly tool for customers to effortlessly locate the
+                restaurant.
+              </li>
+            </ul>
+          </div>
           <div className="flex flex-wrap">
             <p className="text-amber-400 text-lg border-yellow-400 border-4 rounded-lg px-2 m-1">
               React
@@ -83,13 +109,13 @@ export default function Projects() {
               Next.js
             </p>
             <p className="text-amber-400 text-lg border-yellow-400 border-4 rounded-lg px-2 m-1">
-              Vercel
+              Firebase
             </p>
             <p className="text-amber-400 text-lg border-yellow-400 border-4 rounded-lg px-2 m-1">
               Tailwind
             </p>
             <p className="text-amber-400 text-lg border-yellow-400 border-4 rounded-lg px-2 m-1">
-              FormSubmit
+              Vercel
             </p>
           </div>
         </div>
@@ -115,12 +141,27 @@ export default function Projects() {
               Live Site
             </Link>
           </div>
-          <p className="text-gray-500 text-2xl indent-8 mb-4 celllg:max-w-sm tablet:max-w-md lapsm:max-w-lg desksm:max-w-2xl desklg:max-w-3xl">
-            Lead meetings with client to help create the brand of the
-            company&apos;s product. Collaborated with client to build a
-            responsive website that fulfilled all of the company&apos;s buisness
-            needs.
-          </p>
+          <div className="text-gray-500 text-2xl mb-4 celllg:max-w-sm tablet:max-w-md lapsm:max-w-lg desksm:max-w-2xl desklg:max-w-3xl">
+            <ul>
+              <li className="">
+                - Brainstormed, designed, built, and deployed a fully
+                functioning personal dashboard app created with orginization,
+                productivity, and efficency in mind.
+              </li>
+              <li className="">
+                - Used NextAuth.js and Google OAuth to handle user sign in,
+                manage authentication, and establish protected routes.
+              </li>
+              <li className="">
+                - Deployed Firebase&apos;s serverless backend to allow for data,
+                file, and image storage for the dashboard.
+              </li>
+              <li className="">
+                - Created a Dota 2 Pro Match Tracker that displays recent pro
+                Dota 2 matches and is able to search for specefic pro teams.
+              </li>
+            </ul>
+          </div>
           <div className="flex flex-wrap">
             <p className="text-amber-400 text-lg border-yellow-400 border-4 rounded-lg px-2 m-1">
               React
@@ -129,13 +170,16 @@ export default function Projects() {
               Next.js
             </p>
             <p className="text-amber-400 text-lg border-yellow-400 border-4 rounded-lg px-2 m-1">
-              Vercel
+              Firebase
+            </p>
+            <p className="text-amber-400 text-lg border-yellow-400 border-4 rounded-lg px-2 m-1">
+              NextAuth.js
             </p>
             <p className="text-amber-400 text-lg border-yellow-400 border-4 rounded-lg px-2 m-1">
               Tailwind
             </p>
             <p className="text-amber-400 text-lg border-yellow-400 border-4 rounded-lg px-2 m-1">
-              FormSubmit
+              Vercel
             </p>
           </div>
         </div>
@@ -159,27 +203,33 @@ export default function Projects() {
               Live Site
             </Link>
           </div>
-          <p className="text-gray-500 text-2xl indent-8 mb-4 celllg:max-w-sm tablet:max-w-md lapsm:max-w-lg desksm:max-w-2xl desklg:max-w-3xl">
-            Lead meetings with client to help create the brand of the
-            company&apos;s product. Collaborated with client to build a
-            responsive website that fulfilled all of the company&apos;s buisness
-            needs.
-          </p>
+          <div className="text-gray-500 text-2xl mb-4 celllg:max-w-sm tablet:max-w-md lapsm:max-w-lg desksm:max-w-2xl desklg:max-w-3xl">
+            <ul>
+              <li className="text-grey text-2xl">
+                - Used Firebase Auth to handle personal sign in to post blogs.
+              </li>
+              <li className="text-grey text-2xl">
+                - Utilized React and Typescript to design and build the layout
+                and funcitonality of the blog website.
+              </li>
+              <li className="text-grey text-2xl">
+                - Deployed Firebase&apos;s serverless backend to allow for data,
+                file, and image storage for the blog website.
+              </li>
+            </ul>
+          </div>
           <div className="flex flex-wrap">
             <p className="text-amber-400 text-lg border-yellow-400 border-4 rounded-lg px-2 m-1">
               React
             </p>
             <p className="text-amber-400 text-lg border-yellow-400 border-4 rounded-lg px-2 m-1">
-              Next.js
-            </p>
-            <p className="text-amber-400 text-lg border-yellow-400 border-4 rounded-lg px-2 m-1">
-              Vercel
+              Firebase
             </p>
             <p className="text-amber-400 text-lg border-yellow-400 border-4 rounded-lg px-2 m-1">
               Tailwind
             </p>
             <p className="text-amber-400 text-lg border-yellow-400 border-4 rounded-lg px-2 m-1">
-              FormSubmit
+              Vercel
             </p>
           </div>
         </div>

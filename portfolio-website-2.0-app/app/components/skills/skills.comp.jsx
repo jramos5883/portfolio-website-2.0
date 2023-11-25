@@ -64,7 +64,7 @@ export default function Skills() {
   return (
     <div
       ref={loadRef}
-      className="flex flex-col items-center mb-48"
+      className="flex flex-col items-center mb-24"
       style={{ opacity: 0 }} // Initial opacity set to 0
     >
       <p ref={addToRefs} className="text-3xl text-white mb-8">
