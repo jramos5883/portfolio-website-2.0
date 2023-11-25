@@ -105,7 +105,10 @@ export default function Intro() {
   }, []);
 
   return (
-    <div className="m-8 tablet:m-20 max-tablet:flex max-tablet:flex-col max-tablet:justify-center max-tablet:items-center laplg:flex laplg:flex-row laplg:items-center lapxl:mx-52 desksm:mx-80 desklg:mr-96 desklg:ml-96">
+    <div
+      id="id_intro"
+      className="m-8 tablet:m-20 max-tablet:flex max-tablet:flex-col max-tablet:justify-center max-tablet:items-center laplg:flex laplg:flex-row laplg:items-center lapxl:mx-52 desksm:mx-80 desklg:mr-96 desklg:ml-96"
+    >
       <div ref={introRef} className="" style={{ opacity: 0 }}>
         <div ref={firstPRef} className="flex flex-wrap pb-4">
           <a href="#id_aboutMe">
