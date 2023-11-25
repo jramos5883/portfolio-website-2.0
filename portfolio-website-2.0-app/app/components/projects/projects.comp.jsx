@@ -98,7 +98,7 @@ export default function Projects() {
   return (
     <div
       id="id_projects"
-      className="flex flex-col justify-center items-center m-8 lapxl:mx-52 desksm:mx-80 desksm:mt-80 desklg:mr-96 desklg:ml-96 mb-24"
+      className="flex flex-col justify-center items-center m-8 lapxl:mx-52 desksm:mx-80 desksm:mt-80 desklg:mr-96 desklg:ml-96 mb-24 desksm:mb-40"
     >
       <div
         ref={introRef}
