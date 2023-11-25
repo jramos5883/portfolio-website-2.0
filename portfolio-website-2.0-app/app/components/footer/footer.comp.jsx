@@ -52,7 +52,7 @@ export default function Footer() {
     <div ref={introRef} className="" style={{ opacity: 0 }}>
       <div
         ref={firstPRef}
-        className="flex flex-col justify-center items-center mb-8"
+        className="flex flex-col justify-center items-center"
       >
         <div className="flex flex-wrap m-8">
           <a href="#id_intro">
