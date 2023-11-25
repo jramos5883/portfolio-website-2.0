@@ -59,7 +59,7 @@ export default function Projects() {
             layout="responsive"
             height={500}
             width={500}
-            src="/images/portfolioPTTM.png"
+            src="/images/portfolioPttM.png"
             alt="Poke To The Moon"
           />
           <div className="mb-8">
@@ -146,7 +146,7 @@ export default function Projects() {
             layout="responsive"
             height={500}
             width={500}
-            src="/images/portfolioBLog.png"
+            src="/images/portfolioBlog.png"
             alt="Blog Website"
           />
           <div className="mb-8">
