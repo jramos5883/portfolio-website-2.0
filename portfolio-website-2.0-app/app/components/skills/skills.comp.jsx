@@ -3,8 +3,16 @@
 import { useEffect, useRef } from "react";
 import anime from "animejs/lib/anime.es.js";
 
-import { SiNextdotjs, SiSupabase } from "react-icons/si";
+import {
+  SiNextdotjs,
+  SiSupabase,
+  SiMongodb,
+  SiMongoose,
+  SiVercel,
+} from "react-icons/si";
 import { FaLinux, FaGithub, FaWindows } from "react-icons/fa";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { GrMysql } from "react-icons/gr";
 
 export default function Skills() {
   const loadRef = useRef(null); // Ref for the skills container
@@ -209,6 +217,10 @@ export default function Skills() {
           <SiNextdotjs className="next text-white text-8xl" />
         </div>
         <div ref={addToRefs} className="flex flex-col items-center">
+          <p className="text-white text-2xl">Vercel</p>
+          <SiVercel className="text-white text-8xl" />
+        </div>
+        <div ref={addToRefs} className="flex flex-col items-center">
           <p className="text-white text-2xl">Firebase</p>
           <svg
             className="firebase"
@@ -241,6 +253,22 @@ export default function Skills() {
         <div ref={addToRefs} className="flex flex-col items-center">
           <p className="text-white text-2xl">Supabase</p>
           <SiSupabase className="text-teal-400 text-8xl" />
+        </div>
+        <div ref={addToRefs} className="flex flex-col items-center">
+          <p className="text-white text-2xl">MongoDB</p>
+          <SiMongodb className="text-green-400 text-8xl" />
+        </div>
+        <div ref={addToRefs} className="flex flex-col items-center">
+          <p className="text-white text-2xl">Mongoose</p>
+          <SiMongoose className="text-red-500 text-8xl" />
+        </div>
+        <div ref={addToRefs} className="flex flex-col items-center">
+          <p className="text-white text-2xl">MySQL</p>
+          <GrMysql className="text-blue-600 text-8xl" />
+        </div>
+        <div ref={addToRefs} className="flex flex-col items-center">
+          <p className="text-white text-2xl">PostgresSQL</p>
+          <BiLogoPostgresql className="text-blue-500 text-8xl" />
         </div>
         <div ref={addToRefs} className="flex flex-col items-center">
           <p className="text-white text-2xl">Tailwind</p>

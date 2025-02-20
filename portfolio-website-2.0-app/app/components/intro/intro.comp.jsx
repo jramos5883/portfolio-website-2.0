@@ -104,6 +104,8 @@ export default function Intro() {
     };
   }, []);
 
+  // Contact button is hidden until I can fix the Contact Form
+
   return (
     <div
       id="id_intro"
@@ -122,8 +124,9 @@ export default function Intro() {
             </p>
           </a>
           <a href="#id_contact">
-            <p className="text-2xl text-amber-400 border-amber-400 p-2 m-1 border-4 rounded-lg hover:bg-yellow-700">
-              03. <span className="text-2xl text-white">Contact Form</span>
+            <p className="hidden text-2xl text-amber-400 border-amber-400 p-2 m-1 border-4 rounded-lg hover:bg-yellow-700">
+              03.
+              <span className="text-2xl text-white">Contact Form</span>
             </p>
           </a>
         </div>
@@ -146,7 +149,7 @@ export default function Intro() {
         </p>
         <div className="flex flex-wrap mb-8" ref={sixthPRef}>
           <button className="text-2xl text-amber-400 border-yellow-400 p-2 m-1 border-4 rounded-lg hover:bg-yellow-700">
-            <a href="/pdf/JohnRamosTechResume.pdf" target="_blank">
+            <a href="/pdf/JohnRamosTechResumeV2.pdf" target="_blank">
               Resume <i className="fa-regular fa-file fa-2xl"></i>
             </a>
           </button>

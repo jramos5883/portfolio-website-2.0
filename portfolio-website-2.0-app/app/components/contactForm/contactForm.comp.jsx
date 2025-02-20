@@ -142,7 +142,8 @@ export default function ContactForm() {
       ref={introRef}
       style={{ opacity: 0 }}
       id="id_contact"
-      className="flex flex-col justify-center items-center m-8"
+      // hidden class added until I can fix contact form
+      className="hidden flex flex-col justify-center items-center m-8"
     >
       <div ref={firstPRef}>
         <p className="text-amber-400 text-3xl">
