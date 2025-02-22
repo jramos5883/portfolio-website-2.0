@@ -61,7 +61,7 @@ export default function Footer() {
             </p>
           </a>
           <button className="text-2xl text-amber-400 border-yellow-400 p-2 m-1 border-4 rounded-lg hover:bg-yellow-700">
-            <a href="/pdf/JohnRamosTechResumeV3.pdf" target="_blank">
+            <a href="/pdf/JohnRamosTechResumeV4.pdf" target="_blank">
               Resume <i className="fa-regular fa-file fa-2xl"></i>
             </a>
           </button>
